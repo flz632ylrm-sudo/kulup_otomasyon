@@ -34,16 +34,18 @@
             this.btn_guncelle = new System.Windows.Forms.Button();
             this.btn_listele = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_kulup = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmb_bolum = new System.Windows.Forms.ComboBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_telefon = new System.Windows.Forms.TextBox();
-            this.soyisim = new System.Windows.Forms.TextBox();
+            this.txt_soyisim = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_isim = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.Label();
-            this.cmb_bolum = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,7 @@
             this.btn_ekle.TabIndex = 1;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // btn_sil
             // 
@@ -93,25 +96,59 @@
             this.btn_listele.TabIndex = 4;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmb_kulup);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cmb_bolum);
             this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.txt_telefon);
-            this.groupBox1.Controls.Add(this.soyisim);
+            this.groupBox1.Controls.Add(this.txt_soyisim);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_isim);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.Name);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(25, 227);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(979, 349);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cmb_kulup
+            // 
+            this.cmb_kulup.FormattingEnabled = true;
+            this.cmb_kulup.Location = new System.Drawing.Point(237, 300);
+            this.cmb_kulup.Name = "cmb_kulup";
+            this.cmb_kulup.Size = new System.Drawing.Size(202, 24);
+            this.cmb_kulup.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "klüp";
+            // 
+            // cmb_bolum
+            // 
+            this.cmb_bolum.FormattingEnabled = true;
+            this.cmb_bolum.Items.AddRange(new object[] {
+            "Yönetim Bilişim Sistemleri",
+            "Hemşirelik",
+            "Muhasebe ve Finans Yönetimi",
+            "İşletme"});
+            this.cmb_bolum.Location = new System.Drawing.Point(237, 192);
+            this.cmb_bolum.Name = "cmb_bolum";
+            this.cmb_bolum.Size = new System.Drawing.Size(202, 24);
+            this.cmb_bolum.TabIndex = 10;
             // 
             // txt_email
             // 
@@ -127,12 +164,12 @@
             this.txt_telefon.Size = new System.Drawing.Size(202, 22);
             this.txt_telefon.TabIndex = 7;
             // 
-            // soyisim
+            // txt_soyisim
             // 
-            this.soyisim.Location = new System.Drawing.Point(237, 71);
-            this.soyisim.Name = "soyisim";
-            this.soyisim.Size = new System.Drawing.Size(202, 22);
-            this.soyisim.TabIndex = 6;
+            this.txt_soyisim.Location = new System.Drawing.Point(237, 71);
+            this.txt_soyisim.Name = "txt_soyisim";
+            this.txt_soyisim.Size = new System.Drawing.Size(202, 22);
+            this.txt_soyisim.TabIndex = 6;
             // 
             // label1
             // 
@@ -177,22 +214,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Soyad";
             // 
-            // Name
+            // label5
             // 
-            this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(20, 28);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(24, 16);
-            this.Name.TabIndex = 0;
-            this.Name.Text = "Ad";
-            // 
-            // cmb_bolum
-            // 
-            this.cmb_bolum.FormattingEnabled = true;
-            this.cmb_bolum.Location = new System.Drawing.Point(237, 192);
-            this.cmb_bolum.Name = "cmb_bolum";
-            this.cmb_bolum.Size = new System.Drawing.Size(202, 24);
-            this.cmb_bolum.TabIndex = 10;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ad";
             // 
             // Form1
             // 
@@ -207,6 +236,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -225,13 +255,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Name;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_isim;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox txt_telefon;
-        private System.Windows.Forms.TextBox soyisim;
+        private System.Windows.Forms.TextBox txt_soyisim;
         private System.Windows.Forms.ComboBox cmb_bolum;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmb_kulup;
     }
 }
 

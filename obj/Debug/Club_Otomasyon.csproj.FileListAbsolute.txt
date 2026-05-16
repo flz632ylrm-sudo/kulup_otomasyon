@@ -1,0 +1,16 @@
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.csproj.AssemblyReference.cache
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.Form1.resources
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.Properties.Resources.resources
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.csproj.GenerateResource.cache
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.csproj.CoreCompileInputs.cache
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\Club_Otomasyon.exe.config
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\Club_Otomasyon.exe
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\Club_Otomasyon.pdb
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\EntityFramework.dll
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\EntityFramework.xml
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Oto.082BE147.Up2Date
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.exe
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.pdb
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.exe.config

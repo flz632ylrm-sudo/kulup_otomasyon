@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Club_Otomasyon
 {
-    [Table("Table_students")]
+    [Table("Table_student")]
     internal class student
     {
         [Key]
@@ -31,7 +31,10 @@ namespace Club_Otomasyon
         public string student_department { get; set; }
 
         [Required]
-        [MaxLength(100)]
-        public string student_email { get; set; }    
+        [MaxLength(50)]
+        public string student_email { get; set; }
+
+        [Required]
+        public int club_ıd { get; set; }
     }
 }
