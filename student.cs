@@ -36,5 +36,9 @@ namespace Club_Otomasyon
 
         [Required]
         public int club_ıd { get; set; }
+
+        [ForeignKey("club_ıd")]
+        public virtual kulup kulup { get; set; }    
+        
     }
 }

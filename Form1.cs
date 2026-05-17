@@ -25,15 +25,31 @@ namespace Club_Otomasyon
             {
                 using (var db = new studentsDbContext())
                 {
-                    var students = db.students.ToList();
-                    dataGridView1.DataSource = students;
+                    var result = (from s in db.students
+                                 join c in db.clubs on s.club_ıd equals c.club_ıd
+                                 select new
+                                 {
+                                     s.student_ıd,
+                                     s.student_name,
+                                     s.student_surname,
+                                     s.student_phone,
+                                     s.student_department,
+                                     s.student_email,
+                                     KulupAdi = c.club_name  
+                                 }).ToList();
 
-                    dataGridView1.Columns["Student_ıd"].HeaderText = "Öğrenci Id";
+                    dataGridView1.DataSource = result;
+
+
+                    dataGridView1.Columns["student_ıd"].HeaderText = "Öğrenci Id";
                     dataGridView1.Columns["student_name"].HeaderText = "Öğrenci Adı";
                     dataGridView1.Columns["student_surname"].HeaderText = "Öğrenci Soyad";
                     dataGridView1.Columns["student_phone"].HeaderText = "Telefen Numarası";
                     dataGridView1.Columns["student_department"].HeaderText = "Bölüm";
                     dataGridView1.Columns["student_email"].HeaderText = "Öğrenci E-Mail";
+
+                    dataGridView1.Columns["KulupAdi"].HeaderText = "Kulüp";
+
 
                     dataGridView1.Columns["student_ıd"].Visible = false;
 
@@ -68,7 +84,7 @@ namespace Club_Otomasyon
                     db.SaveChanges();
 
                 }
-                MessageBox.Show("Yeni Müşteri Eklendi !");
+                MessageBox.Show("Yeni Öğrenci Eklendi !");
                 btn_listele.PerformClick();
 
             }
@@ -97,8 +113,8 @@ namespace Club_Otomasyon
 
                     var clubs = db.clubs.ToList();
 
-                    cmb_kulup.DisplayMember = "club_name";  // Kullanıcıya gözükecek alan
-                    cmb_kulup.ValueMember = "club_ıd";      // Arkada saklanacak değer
+                    cmb_kulup.DisplayMember = "club_name"; 
+                    cmb_kulup.ValueMember = "club_ıd";      
                     cmb_kulup.DataSource = clubs;
 
                 }
@@ -108,6 +124,61 @@ namespace Club_Otomasyon
             catch (Exception ex)
             {
                 MessageBox.Show($"kulüpler eklenirken hata :{ex.Message}");
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txt_isim.Text = dataGridView1.Rows[e.RowIndex].Cells["student_name"].Value.ToString();
+                txt_soyisim.Text = dataGridView1.Rows[e.RowIndex].Cells["student_surname"].Value.ToString();
+                txt_telefon.Text = dataGridView1.Rows[e.RowIndex].Cells["student_phone"].Value.ToString();
+                cmb_bolum.Text = dataGridView1.Rows[e.RowIndex].Cells["student_department"].Value.ToString();
+                txt_email.Text = dataGridView1.Rows[e.RowIndex].Cells["student_email"].Value.ToString();
+
+                var selectedStudent = dataGridView1.Rows[e.RowIndex].DataBoundItem as student;
+                if (selectedStudent != null)
+                {
+                    
+                    cmb_kulup.SelectedValue = selectedStudent.club_ıd;
+                    
+                }
+            }
+        }
+
+        private void btn_sil_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult sonuc = MessageBox.Show(
+                            "Silmek istediğinize emin misiniz?",
+                            "Silme Onayı",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question);
+
+             if (sonuc == DialogResult.Yes )
+                {
+                    if(dataGridView1.CurrentRow != null)
+                    {
+                        int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["student_ıd"].Value);
+                        student Student= db.students.Find(selectedId);
+                        if (Student != null)
+                        {
+                            db.students.Remove(Student);   
+                            db.SaveChanges();
+
+                            MessageBox.Show("Öğrenci Silindi!");
+                            btn_listele.PerformClick();
+                        }
+
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata = {ex.Message}");
             }
         }
     } 
