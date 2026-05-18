@@ -34,11 +34,10 @@ namespace Club_Otomasyon
         [MaxLength(50)]
         public string student_email { get; set; }
 
-        [Required]
-        public int club_ıd { get; set; }
-
-        [ForeignKey("club_ıd")]
-        public virtual kulup kulup { get; set; }    
+        
+           
+       
+        public virtual ICollection<StudentEvent> StudentEvents { get; set; }
         
     }
 }

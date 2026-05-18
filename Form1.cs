@@ -23,23 +23,8 @@ namespace Club_Otomasyon
         {
             try
             {
-                using (var db = new studentsDbContext())
-                {
-                    var result = (from s in db.students
-                                  join c in db.clubs on s.club_ıd equals c.club_ıd
-                                  select new
-                                  {
-                                      s.student_ıd,
-                                      s.student_name,
-                                      s.student_surname,
-                                      s.student_phone,
-                                      s.student_department,
-                                      s.student_email,
-                                      KulupAdi = c.club_name
-                                  }).ToList();
-
-                    dataGridView1.DataSource = result;
-
+                    var students = db.students.ToList();
+                    dataGridView1.DataSource = students;
 
                     dataGridView1.Columns["student_ıd"].HeaderText = "Öğrenci Id";
                     dataGridView1.Columns["student_name"].HeaderText = "Öğrenci Adı";
@@ -48,13 +33,10 @@ namespace Club_Otomasyon
                     dataGridView1.Columns["student_department"].HeaderText = "Bölüm";
                     dataGridView1.Columns["student_email"].HeaderText = "Öğrenci E-Mail";
 
-                    dataGridView1.Columns["KulupAdi"].HeaderText = "Kulüp";
-
-
                     dataGridView1.Columns["student_ıd"].Visible = false;
 
                     dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                }
+                
             }
             catch (Exception ex)
             {
@@ -74,18 +56,15 @@ namespace Club_Otomasyon
                     student_department = cmb_bolum.Text,
                     student_email = txt_email.Text,
 
-                    club_ıd = (int)cmb_kulup.SelectedValue
+                   
                 };
 
-                using (var db = new studentsDbContext())
-
-                {
                     db.students.Add(newstudent);
                     db.SaveChanges();
 
-                }
-                MessageBox.Show("Yeni Öğrenci Eklendi !");
-                btn_listele.PerformClick();
+                
+                    MessageBox.Show("Yeni Öğrenci Eklendi !");
+                    btn_listele.PerformClick();
 
             }
 
@@ -106,25 +85,7 @@ namespace Club_Otomasyon
         }
         private void LoadClubsToComboBox()
         {
-            try
-            {
-                using (var db = new studentsDbContext())
-                {
-
-                    var clubs = db.clubs.ToList();
-
-                    cmb_kulup.DisplayMember = "club_name";
-                    cmb_kulup.ValueMember = "club_ıd";
-                    cmb_kulup.DataSource = clubs;
-
-                }
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show($"kulüpler eklenirken hata :{ex.Message}");
-            }
+           
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -138,12 +99,7 @@ namespace Club_Otomasyon
                 txt_email.Text = dataGridView1.Rows[e.RowIndex].Cells["student_email"].Value.ToString();
 
                 var selectedStudent = dataGridView1.Rows[e.RowIndex].DataBoundItem as student;
-                if (selectedStudent != null)
-                {
-
-                    cmb_kulup.SelectedValue = selectedStudent.club_ıd;
-
-                }
+                
             }
         }
 
@@ -197,10 +153,7 @@ namespace Club_Otomasyon
                         student.student_phone = txt_telefon.Text;
                         student.student_department = cmb_bolum.Text;
                         student.student_email = txt_email.Text;
-                        if (cmb_kulup.SelectedValue != null)
-                        {
-                            student.club_ıd = Convert.ToInt32(cmb_kulup.SelectedValue);
-                        }
+                       
 
                         db.SaveChanges();
                         MessageBox.Show("Öğrenci  güncellendi!");

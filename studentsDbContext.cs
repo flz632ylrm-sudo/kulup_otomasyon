@@ -14,5 +14,8 @@ namespace Club_Otomasyon
         }
         public DbSet<student> students { get; set; }
         public DbSet<kulup> clubs { get; set; }
+
+        public DbSet<Event> events { get; set; }
+        public DbSet<StudentEvent> studentEvents  { get; set; }
     }
 }

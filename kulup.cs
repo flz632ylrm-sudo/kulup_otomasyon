@@ -19,7 +19,8 @@ namespace Club_Otomasyon
         [MaxLength(100)]
         public string club_name { get; set; }
 
+        public virtual ICollection<Event> events { get; set; }
        
-        public virtual ICollection<student> Students { get; set; }
+        
     }
 }

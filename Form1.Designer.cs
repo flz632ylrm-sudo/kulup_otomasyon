@@ -34,8 +34,6 @@
             this.btn_guncelle = new System.Windows.Forms.Button();
             this.btn_listele = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmb_kulup = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.cmb_bolum = new System.Windows.Forms.ComboBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_telefon = new System.Windows.Forms.TextBox();
@@ -103,8 +101,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmb_kulup);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cmb_bolum);
             this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.txt_telefon);
@@ -122,23 +118,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // cmb_kulup
-            // 
-            this.cmb_kulup.FormattingEnabled = true;
-            this.cmb_kulup.Location = new System.Drawing.Point(237, 300);
-            this.cmb_kulup.Name = "cmb_kulup";
-            this.cmb_kulup.Size = new System.Drawing.Size(202, 24);
-            this.cmb_kulup.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 309);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 16);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "klüp";
             // 
             // cmb_bolum
             // 
@@ -265,8 +244,6 @@
         private System.Windows.Forms.TextBox txt_telefon;
         private System.Windows.Forms.TextBox txt_soyisim;
         private System.Windows.Forms.ComboBox cmb_bolum;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmb_kulup;
     }
 }
 

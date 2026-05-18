@@ -14,3 +14,5 @@ C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Oto.082
 C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.exe
 C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.pdb
 C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.exe.config
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.Ana_Form.resources
+C:\Users\filiz\source\repos\Club_Otomasyon\Club_Otomasyon\obj\Debug\Club_Otomasyon.EtkÖğrenci.resources
