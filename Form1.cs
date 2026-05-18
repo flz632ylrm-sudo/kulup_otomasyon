@@ -26,17 +26,17 @@ namespace Club_Otomasyon
                 using (var db = new studentsDbContext())
                 {
                     var result = (from s in db.students
-                                 join c in db.clubs on s.club_ıd equals c.club_ıd
-                                 select new
-                                 {
-                                     s.student_ıd,
-                                     s.student_name,
-                                     s.student_surname,
-                                     s.student_phone,
-                                     s.student_department,
-                                     s.student_email,
-                                     KulupAdi = c.club_name  
-                                 }).ToList();
+                                  join c in db.clubs on s.club_ıd equals c.club_ıd
+                                  select new
+                                  {
+                                      s.student_ıd,
+                                      s.student_name,
+                                      s.student_surname,
+                                      s.student_phone,
+                                      s.student_department,
+                                      s.student_email,
+                                      KulupAdi = c.club_name
+                                  }).ToList();
 
                     dataGridView1.DataSource = result;
 
@@ -113,8 +113,8 @@ namespace Club_Otomasyon
 
                     var clubs = db.clubs.ToList();
 
-                    cmb_kulup.DisplayMember = "club_name"; 
-                    cmb_kulup.ValueMember = "club_ıd";      
+                    cmb_kulup.DisplayMember = "club_name";
+                    cmb_kulup.ValueMember = "club_ıd";
                     cmb_kulup.DataSource = clubs;
 
                 }
@@ -140,9 +140,9 @@ namespace Club_Otomasyon
                 var selectedStudent = dataGridView1.Rows[e.RowIndex].DataBoundItem as student;
                 if (selectedStudent != null)
                 {
-                    
+
                     cmb_kulup.SelectedValue = selectedStudent.club_ıd;
-                    
+
                 }
             }
         }
@@ -157,15 +157,15 @@ namespace Club_Otomasyon
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question);
 
-             if (sonuc == DialogResult.Yes )
+                if (sonuc == DialogResult.Yes)
                 {
-                    if(dataGridView1.CurrentRow != null)
+                    if (dataGridView1.CurrentRow != null)
                     {
                         int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["student_ıd"].Value);
-                        student Student= db.students.Find(selectedId);
+                        student Student = db.students.Find(selectedId);
                         if (Student != null)
                         {
-                            db.students.Remove(Student);   
+                            db.students.Remove(Student);
                             db.SaveChanges();
 
                             MessageBox.Show("Öğrenci Silindi!");
@@ -173,7 +173,7 @@ namespace Club_Otomasyon
                         }
 
                     }
-                    
+
                 }
             }
             catch (Exception ex)
@@ -181,5 +181,38 @@ namespace Club_Otomasyon
                 MessageBox.Show($"Hata = {ex.Message}");
             }
         }
-    } 
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int selectedId = Convert.ToInt32(dataGridView1.CurrentRow.Cells["student_ıd"].Value);
+                    student student = db.students.Find(selectedId);
+                    if (student != null)
+                    {
+                        student.student_name = txt_isim.Text;
+                        student.student_surname = txt_soyisim.Text;
+                        student.student_phone = txt_telefon.Text;
+                        student.student_department = cmb_bolum.Text;
+                        student.student_email = txt_email.Text;
+                        if (cmb_kulup.SelectedValue != null)
+                        {
+                            student.club_ıd = Convert.ToInt32(cmb_kulup.SelectedValue);
+                        }
+
+                        db.SaveChanges();
+                        MessageBox.Show("Öğrenci  güncellendi!");
+                        btn_listele.PerformClick();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata = {ex.Message}");
+            }
+
+        }
     }
+}

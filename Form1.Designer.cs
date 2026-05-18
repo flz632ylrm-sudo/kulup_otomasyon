@@ -89,6 +89,7 @@
             this.btn_guncelle.TabIndex = 3;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_listele
             // 
