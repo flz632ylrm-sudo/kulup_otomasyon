@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -205,11 +206,22 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Ad";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(623, 603);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 39);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "ANA MENÜ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 677);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_listele);
             this.Controls.Add(this.btn_guncelle);
@@ -244,6 +256,7 @@
         private System.Windows.Forms.TextBox txt_telefon;
         private System.Windows.Forms.TextBox txt_soyisim;
         private System.Windows.Forms.ComboBox cmb_bolum;
+        private System.Windows.Forms.Button button1;
     }
 }
 

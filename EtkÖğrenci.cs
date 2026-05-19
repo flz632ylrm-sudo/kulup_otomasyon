@@ -220,5 +220,13 @@ namespace Club_Otomasyon
                 MessageBox.Show($"Hata ={ex.Message}");
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Ana_Form anaForm = new Ana_Form();
+            anaForm.Show();
+            this.Hide();
+
+        }
     }
 }
