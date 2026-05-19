@@ -30,14 +30,14 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_sil = new System.Windows.Forms.Button();
             this.btn_listele = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.combo_etkinlik = new System.Windows.Forms.ComboBox();
+            this.combo_ogrenci = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1120, 281);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
@@ -60,15 +61,17 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "EKLE";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btn_sil
             // 
-            this.button2.Location = new System.Drawing.Point(403, 537);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 51);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "SİL";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_sil.Location = new System.Drawing.Point(403, 537);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(121, 51);
+            this.btn_sil.TabIndex = 2;
+            this.btn_sil.Text = "SİL";
+            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_listele
             // 
@@ -91,8 +94,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.combo_etkinlik);
+            this.groupBox1.Controls.Add(this.combo_ogrenci);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(199, 303);
@@ -102,14 +105,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // label1
+            // combo_etkinlik
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ÖĞRENCİ";
+            this.combo_etkinlik.FormattingEnabled = true;
+            this.combo_etkinlik.Location = new System.Drawing.Point(162, 139);
+            this.combo_etkinlik.Name = "combo_etkinlik";
+            this.combo_etkinlik.Size = new System.Drawing.Size(425, 24);
+            this.combo_etkinlik.TabIndex = 3;
+            // 
+            // combo_ogrenci
+            // 
+            this.combo_ogrenci.FormattingEnabled = true;
+            this.combo_ogrenci.Location = new System.Drawing.Point(162, 46);
+            this.combo_ogrenci.Name = "combo_ogrenci";
+            this.combo_ogrenci.Size = new System.Drawing.Size(425, 24);
+            this.combo_ogrenci.TabIndex = 2;
             // 
             // label2
             // 
@@ -120,21 +130,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "ETKİNLİK";
             // 
-            // comboBox1
+            // label1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(162, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(425, 24);
-            this.comboBox1.TabIndex = 2;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(162, 139);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(425, 24);
-            this.comboBox2.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ÖĞRENCİ";
             // 
             // EtkÖğrenci
             // 
@@ -144,11 +147,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_listele);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_sil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "EtkÖğrenci";
             this.Text = "EtkÖğrenci";
+            this.Load += new System.EventHandler(this.EtkÖğrenci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -160,13 +164,13 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_sil;
         private System.Windows.Forms.Button btn_listele;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combo_etkinlik;
+        private System.Windows.Forms.ComboBox combo_ogrenci;
     }
 }
