@@ -62,6 +62,12 @@
     <Compile Include="Ana_Form.Designer.cs">
       <DependentUpon>Ana_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Etkinlik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etkinlik.Designer.cs">
+      <DependentUpon>Etkinlik.cs</DependentUpon>
+    </Compile>
     <Compile Include="EtkÖğrenci.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="studentsDbContext.cs" />
     <EmbeddedResource Include="Ana_Form.resx">
       <DependentUpon>Ana_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etkinlik.resx">
+      <DependentUpon>Etkinlik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EtkÖğrenci.resx">
       <DependentUpon>EtkÖğrenci.cs</DependentUpon>

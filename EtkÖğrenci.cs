@@ -80,7 +80,7 @@ namespace Club_Otomasyon
 
                 {
                     E.event_ıd,
-                    EventInfo = E.event_name + "_" + E.event_date + "(" + E.kulup.club_name + ")"
+                    EventInfo = E.event_name 
                 })
                 .ToList();
                 combo_etkinlik.DisplayMember = "EventInfo";
@@ -178,6 +178,46 @@ namespace Club_Otomasyon
             catch(Exception ex) 
             {
                 MessageBox.Show($"Hata = {ex.Message}");
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (radioButton1.Checked)
+                {
+                    var result = db.studentEvents
+                    .GroupBy(se => new
+                     {
+                      se.Student.student_ıd,
+                        se.Student.student_name,
+                        se.Student.student_surname,
+
+                    })
+                   .Select(g => new
+                    {
+                       FullName = g.Key.student_name + " " + g.Key.student_surname,
+                       TotalCount = g.Count()
+                    })
+
+                  .OrderByDescending(x => x.TotalCount)
+                  .FirstOrDefault();
+
+                    if (result != null)
+                    {
+                        label3.Text = $"{result.FullName} {result.TotalCount} etkinliğe katılmış";
+                    }
+                    else
+                    {
+                        label3.Text = "kayıt bulunamadı";
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata ={ex.Message}");
             }
         }
     }

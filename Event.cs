@@ -21,6 +21,8 @@ namespace Club_Otomasyon
         [Required]
         public DateTime event_date { get; set; }
 
+        [Required]
+        public string event_yer_saat { get; set; }
         
 
         [ForeignKey("kulup")]
