@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace Club_Otomasyon
+namespace Club_Otomasyon.Models
 {
     internal class studentsDbContext : DbContext
     {

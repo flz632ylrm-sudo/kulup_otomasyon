@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Data.Entity;
 using System.Reflection;
-
+using Club_Otomasyon.Models;
 
 
 namespace Club_Otomasyon
@@ -227,6 +227,54 @@ namespace Club_Otomasyon
             anaForm.Show();
             this.Hide();
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (radioButton1.Checked)
+                {
+
+                    var result = db.studentEvents
+                        .Include(se => se.Event)
+                        .Include(se => se.Student)
+                        .GroupBy(se => new
+                        {
+                            se.Event.event_ıd,
+                            se.Event.event_name,
+                            se.Event.event_date
+                        })
+                        .Select(g => new
+                        {
+                            EventName = g.Key.event_name,
+                            EventDate = g.Key.event_date,
+                            StudentCount = g.Count()
+                        })
+                        .OrderByDescending(x => x.StudentCount)
+                        .FirstOrDefault(); 
+                    if (result != null)
+                    {
+                        label4.Text = $"Etkinlik: {result.EventName} - Tarih: {result.EventDate.ToShortDateString()} - Katılan Öğrenci Sayısı: {result.StudentCount}";
+                    }
+                    else
+                    {
+                        label4.Text = "Kayıt bulunamadı.";
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata = {ex.Message}");
+            }
         }
     }
 }

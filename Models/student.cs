@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Club_Otomasyon
+namespace Club_Otomasyon.Models
 {
     [Table("Table_student")]
     internal class student
