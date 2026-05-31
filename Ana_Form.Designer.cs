@@ -35,44 +35,55 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(210, 100);
+            this.button1.BackColor = System.Drawing.Color.Tan;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(266, 398);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 58);
+            this.button1.Size = new System.Drawing.Size(158, 98);
             this.button1.TabIndex = 0;
             this.button1.Text = "ÖĞRENCİ  İŞLEMLERİ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(210, 187);
+            this.button2.BackColor = System.Drawing.Color.Tan;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(442, 398);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 62);
+            this.button2.Size = new System.Drawing.Size(158, 98);
             this.button2.TabIndex = 1;
             this.button2.Text = "ÖĞRENCİ  ETKİNLİK KAYDI";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(210, 279);
+            this.button3.BackColor = System.Drawing.Color.Tan;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(621, 398);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 55);
+            this.button3.Size = new System.Drawing.Size(158, 98);
             this.button3.TabIndex = 2;
             this.button3.Text = "ETKİNLİK İŞLEMLERİ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Ana_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Club_Otomasyon.Properties.Resources.Gemini_Generated_Image_3ex68o3ex68o3ex6;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1041, 595);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Name = "Ana_Form";
             this.Text = "Ana_Form";
+            this.Load += new System.EventHandler(this.Ana_Form_Load);
             this.ResumeLayout(false);
 
         }

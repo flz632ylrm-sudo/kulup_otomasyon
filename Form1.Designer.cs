@@ -51,57 +51,71 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(992, 209);
+            this.dataGridView1.Size = new System.Drawing.Size(1223, 227);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_ekle
             // 
-            this.btn_ekle.Location = new System.Drawing.Point(25, 603);
+            this.btn_ekle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_ekle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ekle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_ekle.Location = new System.Drawing.Point(184, 613);
             this.btn_ekle.Name = "btn_ekle";
-            this.btn_ekle.Size = new System.Drawing.Size(114, 40);
+            this.btn_ekle.Size = new System.Drawing.Size(115, 52);
             this.btn_ekle.TabIndex = 1;
             this.btn_ekle.Text = "Ekle";
-            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.UseVisualStyleBackColor = false;
             this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // btn_sil
             // 
-            this.btn_sil.Location = new System.Drawing.Point(185, 603);
+            this.btn_sil.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_sil.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_sil.Location = new System.Drawing.Point(361, 613);
             this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(105, 40);
+            this.btn_sil.Size = new System.Drawing.Size(111, 52);
             this.btn_sil.TabIndex = 2;
             this.btn_sil.Text = "Sil";
-            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.UseVisualStyleBackColor = false;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // btn_guncelle
             // 
-            this.btn_guncelle.Location = new System.Drawing.Point(336, 603);
+            this.btn_guncelle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_guncelle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guncelle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_guncelle.Location = new System.Drawing.Point(546, 613);
             this.btn_guncelle.Name = "btn_guncelle";
-            this.btn_guncelle.Size = new System.Drawing.Size(104, 40);
+            this.btn_guncelle.Size = new System.Drawing.Size(111, 52);
             this.btn_guncelle.TabIndex = 3;
             this.btn_guncelle.Text = "Güncelle";
-            this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.UseVisualStyleBackColor = false;
             this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_listele
             // 
-            this.btn_listele.Location = new System.Drawing.Point(479, 603);
+            this.btn_listele.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_listele.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_listele.Location = new System.Drawing.Point(729, 613);
             this.btn_listele.Name = "btn_listele";
-            this.btn_listele.Size = new System.Drawing.Size(92, 40);
+            this.btn_listele.Size = new System.Drawing.Size(108, 52);
             this.btn_listele.TabIndex = 4;
             this.btn_listele.Text = "Listele";
-            this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.UseVisualStyleBackColor = false;
             this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.cmb_bolum);
             this.groupBox1.Controls.Add(this.txt_email);
             this.groupBox1.Controls.Add(this.txt_telefon);
@@ -112,9 +126,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(25, 227);
+            this.groupBox1.Location = new System.Drawing.Point(261, 286);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(979, 349);
+            this.groupBox1.Size = new System.Drawing.Size(642, 307);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -130,36 +144,37 @@
             "İşletme"});
             this.cmb_bolum.Location = new System.Drawing.Point(237, 192);
             this.cmb_bolum.Name = "cmb_bolum";
-            this.cmb_bolum.Size = new System.Drawing.Size(202, 24);
+            this.cmb_bolum.Size = new System.Drawing.Size(357, 24);
             this.cmb_bolum.TabIndex = 10;
             // 
             // txt_email
             // 
             this.txt_email.Location = new System.Drawing.Point(237, 252);
             this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(202, 22);
+            this.txt_email.Size = new System.Drawing.Size(357, 22);
             this.txt_email.TabIndex = 9;
             // 
             // txt_telefon
             // 
             this.txt_telefon.Location = new System.Drawing.Point(237, 134);
             this.txt_telefon.Name = "txt_telefon";
-            this.txt_telefon.Size = new System.Drawing.Size(202, 22);
+            this.txt_telefon.Size = new System.Drawing.Size(357, 22);
             this.txt_telefon.TabIndex = 7;
             // 
             // txt_soyisim
             // 
             this.txt_soyisim.Location = new System.Drawing.Point(237, 71);
             this.txt_soyisim.Name = "txt_soyisim";
-            this.txt_soyisim.Size = new System.Drawing.Size(202, 22);
+            this.txt_soyisim.Size = new System.Drawing.Size(357, 22);
             this.txt_soyisim.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(20, 259);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "E-Mail";
             // 
@@ -167,60 +182,69 @@
             // 
             this.txt_isim.Location = new System.Drawing.Point(237, 22);
             this.txt_isim.Name = "txt_isim";
-            this.txt_isim.Size = new System.Drawing.Size(202, 22);
+            this.txt_isim.Size = new System.Drawing.Size(357, 22);
             this.txt_isim.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(20, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Bölüm";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(20, 141);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 16);
+            this.label3.Size = new System.Drawing.Size(141, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefon Numarası";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 16);
+            this.label2.Size = new System.Drawing.Size(60, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Soyad";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.Location = new System.Drawing.Point(20, 28);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 16);
+            this.label5.Size = new System.Drawing.Size(29, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Ad";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(623, 603);
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(905, 611);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 39);
+            this.button1.Size = new System.Drawing.Size(121, 52);
             this.button1.TabIndex = 6;
             this.button1.Text = "ANA MENÜ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 677);
+            this.BackgroundImage = global::Club_Otomasyon.Properties.Resources.Gemini_Generated_Image_8uny888uny888uny;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1224, 677);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_listele);
@@ -228,6 +252,7 @@
             this.Controls.Add(this.btn_sil);
             this.Controls.Add(this.btn_ekle);
             this.Controls.Add(this.dataGridView1);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -42,5 +42,10 @@ namespace Club_Otomasyon
             ogrenciFormu.ShowDialog();
             this.Show();
         }
+
+        private void Ana_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

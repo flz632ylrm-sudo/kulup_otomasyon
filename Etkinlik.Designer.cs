@@ -47,45 +47,49 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(-6, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1169, 301);
+            this.dataGridView1.Size = new System.Drawing.Size(1181, 280);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label_isim
             // 
             this.label_isim.AutoSize = true;
-            this.label_isim.Location = new System.Drawing.Point(107, 336);
+            this.label_isim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_isim.Location = new System.Drawing.Point(351, 351);
             this.label_isim.Name = "label_isim";
-            this.label_isim.Size = new System.Drawing.Size(72, 16);
+            this.label_isim.Size = new System.Drawing.Size(98, 22);
             this.label_isim.TabIndex = 1;
             this.label_isim.Text = "Etkinlik Adı";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 391);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(351, 407);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 16);
+            this.label1.Size = new System.Drawing.Size(118, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Etkinlik Tarihi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 496);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(351, 517);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.Size = new System.Drawing.Size(87, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Kulüp Adı";
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(249, 333);
+            this.txt_name.Location = new System.Drawing.Point(501, 351);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(387, 22);
             this.txt_name.TabIndex = 4;
@@ -101,88 +105,101 @@
             "Sahne Sanatları Topluluğu",
             "Sağlık ve Yaşam Bilimleri Topluluğu",
             "Gümrük ve Ticaret Topluluğu"});
-            this.combo_kulup.Location = new System.Drawing.Point(249, 496);
+            this.combo_kulup.Location = new System.Drawing.Point(501, 515);
             this.combo_kulup.Name = "combo_kulup";
             this.combo_kulup.Size = new System.Drawing.Size(387, 24);
             this.combo_kulup.TabIndex = 5;
             // 
             // txt_date
             // 
-            this.txt_date.Location = new System.Drawing.Point(249, 391);
+            this.txt_date.Location = new System.Drawing.Point(501, 407);
             this.txt_date.Name = "txt_date";
             this.txt_date.Size = new System.Drawing.Size(387, 22);
             this.txt_date.TabIndex = 6;
             // 
             // btn_ekle
             // 
-            this.btn_ekle.Location = new System.Drawing.Point(110, 560);
+            this.btn_ekle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_ekle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_ekle.Location = new System.Drawing.Point(228, 580);
             this.btn_ekle.Name = "btn_ekle";
-            this.btn_ekle.Size = new System.Drawing.Size(106, 42);
+            this.btn_ekle.Size = new System.Drawing.Size(106, 50);
             this.btn_ekle.TabIndex = 7;
             this.btn_ekle.Text = "EKLE";
-            this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.UseVisualStyleBackColor = false;
             this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // btn_sil
             // 
-            this.btn_sil.Location = new System.Drawing.Point(260, 560);
+            this.btn_sil.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_sil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_sil.Location = new System.Drawing.Point(383, 580);
             this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(105, 41);
+            this.btn_sil.Size = new System.Drawing.Size(105, 49);
             this.btn_sil.TabIndex = 8;
             this.btn_sil.Text = "SİL";
-            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.UseVisualStyleBackColor = false;
             this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // btn_guncelle
             // 
-            this.btn_guncelle.Location = new System.Drawing.Point(417, 560);
+            this.btn_guncelle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_guncelle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_guncelle.Location = new System.Drawing.Point(531, 580);
             this.btn_guncelle.Name = "btn_guncelle";
-            this.btn_guncelle.Size = new System.Drawing.Size(99, 41);
+            this.btn_guncelle.Size = new System.Drawing.Size(99, 49);
             this.btn_guncelle.TabIndex = 9;
             this.btn_guncelle.Text = "GÜNCELLE";
-            this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.UseVisualStyleBackColor = false;
             this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_listele
             // 
-            this.btn_listele.Location = new System.Drawing.Point(570, 560);
+            this.btn_listele.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_listele.Location = new System.Drawing.Point(683, 580);
             this.btn_listele.Name = "btn_listele";
-            this.btn_listele.Size = new System.Drawing.Size(107, 41);
+            this.btn_listele.Size = new System.Drawing.Size(107, 49);
             this.btn_listele.TabIndex = 10;
             this.btn_listele.Text = "LİSTELE";
-            this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.UseVisualStyleBackColor = false;
             this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // label_yersaat
             // 
             this.label_yersaat.AutoSize = true;
-            this.label_yersaat.Location = new System.Drawing.Point(110, 439);
+            this.label_yersaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label_yersaat.Location = new System.Drawing.Point(351, 461);
             this.label_yersaat.Name = "label_yersaat";
-            this.label_yersaat.Size = new System.Drawing.Size(77, 16);
+            this.label_yersaat.Size = new System.Drawing.Size(104, 22);
             this.label_yersaat.TabIndex = 11;
             this.label_yersaat.Text = "Yer ve Saat";
             // 
             // txt_yer_saat
             // 
-            this.txt_yer_saat.Location = new System.Drawing.Point(249, 439);
+            this.txt_yer_saat.Location = new System.Drawing.Point(501, 463);
             this.txt_yer_saat.Name = "txt_yer_saat";
             this.txt_yer_saat.Size = new System.Drawing.Size(387, 22);
             this.txt_yer_saat.TabIndex = 12;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(724, 560);
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(841, 580);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 40);
+            this.button1.Size = new System.Drawing.Size(100, 48);
             this.button1.TabIndex = 13;
             this.button1.Text = "ANA MENÜ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Etkinlik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Club_Otomasyon.Properties.Resources.ChatGPT_Image_31_May_2026_22_48_54;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1175, 662);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_yer_saat);

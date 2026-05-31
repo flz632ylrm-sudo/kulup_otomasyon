@@ -39,10 +39,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -50,57 +50,67 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 44);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1233, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(1233, 227);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 537);
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(3, 542);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 52);
+            this.button1.Size = new System.Drawing.Size(123, 57);
             this.button1.TabIndex = 1;
             this.button1.Text = "EKLE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_sil
             // 
-            this.btn_sil.Location = new System.Drawing.Point(163, 538);
+            this.btn_sil.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_sil.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_sil.Location = new System.Drawing.Point(287, 545);
             this.btn_sil.Name = "btn_sil";
-            this.btn_sil.Size = new System.Drawing.Size(121, 51);
+            this.btn_sil.Size = new System.Drawing.Size(131, 54);
             this.btn_sil.TabIndex = 2;
             this.btn_sil.Text = "SİL";
-            this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.UseVisualStyleBackColor = false;
             this.btn_sil.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_listele
             // 
-            this.btn_listele.Location = new System.Drawing.Point(319, 538);
+            this.btn_listele.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btn_listele.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_listele.Location = new System.Drawing.Point(152, 542);
             this.btn_listele.Name = "btn_listele";
-            this.btn_listele.Size = new System.Drawing.Size(108, 51);
+            this.btn_listele.Size = new System.Drawing.Size(117, 57);
             this.btn_listele.TabIndex = 3;
             this.btn_listele.Text = "LİSTELE";
-            this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.UseVisualStyleBackColor = false;
             this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(469, 539);
+            this.button4.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(438, 545);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 50);
+            this.button4.Size = new System.Drawing.Size(112, 50);
             this.button4.TabIndex = 4;
             this.button4.Text = "ANA MENÜ";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Controls.Add(this.combo_etkinlik);
             this.groupBox1.Controls.Add(this.combo_ogrenci);
             this.groupBox1.Controls.Add(this.label2);
@@ -110,7 +120,7 @@
             this.groupBox1.Size = new System.Drawing.Size(546, 217);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Kayıt  Bilgileri";
             // 
             // combo_etkinlik
             // 
@@ -148,42 +158,32 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.radioButton2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(555, 314);
+            this.groupBox2.Location = new System.Drawing.Point(555, 291);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(681, 132);
+            this.groupBox2.Size = new System.Drawing.Size(681, 180);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İSTATİSTİKLER";
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 30);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(115, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 71);
+            this.radioButton2.Location = new System.Drawing.Point(6, 106);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(103, 20);
             this.radioButton2.TabIndex = 3;
@@ -192,20 +192,33 @@
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(115, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(115, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 42);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(103, 20);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // EtkÖğrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Club_Otomasyon.Properties.Resources.Gemini_Generated_Image_ub5x3zub5x3zub5x__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1242, 642);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -214,6 +227,7 @@
             this.Controls.Add(this.btn_sil);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.DoubleBuffered = true;
             this.Name = "EtkÖğrenci";
             this.Text = "EtkÖğrenci";
             this.Load += new System.EventHandler(this.EtkÖğrenci_Load);
