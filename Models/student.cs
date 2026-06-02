@@ -34,10 +34,17 @@ namespace Club_Otomasyon.Models
         [MaxLength(50)]
         public string student_email { get; set; }
 
+
+
         
-           
-       
         public virtual ICollection<StudentEvent> StudentEvents { get; set; }
-        
+
+       // internal StudentEvent StudentEvent
+        //{
+          //  get => default;
+           // set
+            //{
+           //}
+        //}
     }
 }

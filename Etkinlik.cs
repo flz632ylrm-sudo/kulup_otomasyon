@@ -147,6 +147,14 @@ namespace Club_Otomasyon
                         Event etkinlik = db.events.Find(selectedId);
                         if (etkinlik != null)
                         {
+                            //db.events.Remove(etkinlik);
+                            //db.SaveChanges();
+                            var eventStudents = db.studentEvents
+                            .Where(se => se.event_ıd == selectedId)
+                            .ToList();
+
+                            db.studentEvents.RemoveRange(eventStudents);
+
                             db.events.Remove(etkinlik);
                             db.SaveChanges();
 
@@ -161,8 +169,12 @@ namespace Club_Otomasyon
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata = {ex.Message}");
+               // MessageBox.Show($"Hata = {ex.Message}");
+               
+            {
+                MessageBox.Show(ex.ToString());
             }
+        }
         }
 
         private void btn_guncelle_Click(object sender, EventArgs e)
@@ -189,8 +201,12 @@ namespace Club_Otomasyon
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata = {ex.Message}");
+                //MessageBox.Show($"Hata = {ex.Message}");
+               
+            {
+                MessageBox.Show(ex.ToString());
             }
+        }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

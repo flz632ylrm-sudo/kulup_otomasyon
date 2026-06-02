@@ -27,13 +27,18 @@ namespace Club_Otomasyon.Models
         
 
         [ForeignKey("kulup")]
-        public int club_ıd{ get; set; } 
+        public int club_ıd{ get; set; }
 
+        [ForeignKey("club_ıd")]
         public virtual kulup kulup { get; set; }
-        public virtual ICollection<StudentEvent>StudentEvents{ get; set; }  
+        public virtual ICollection<StudentEvent>StudentEvents{ get; set; }
 
-
-        
-
+        //internal StudentEvent StudentEvent
+        //{
+           // get => default;
+           // set
+           // {
+           // }
+        //}
     }
 }

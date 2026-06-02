@@ -20,7 +20,13 @@ namespace Club_Otomasyon.Models
         public string club_name { get; set; }
 
         public virtual ICollection<Event> events { get; set; }
-       
-        
+
+        //internal Event Event
+        //{
+          //  get => default;
+           // set
+           // {
+           // }
+        //}
     }
 }

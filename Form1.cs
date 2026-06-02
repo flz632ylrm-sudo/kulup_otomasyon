@@ -24,25 +24,40 @@ namespace Club_Otomasyon
         {
             try
             {
-                    var students = db.students.ToList();
-                    dataGridView1.DataSource = students;
+                var students = db.students
+    .Select(s => new
+    {
+        s.student_ıd,               // Türkçe ı kullandığınız için aynen yazıyorum
+        s.student_name,
+        s.student_surname,
+        s.student_phone,
+        s.student_department,
+        s.student_email
+    })
+    .ToList();
 
-                    dataGridView1.Columns["student_ıd"].HeaderText = "Öğrenci Id";
-                    dataGridView1.Columns["student_name"].HeaderText = "Öğrenci Adı";
-                    dataGridView1.Columns["student_surname"].HeaderText = "Öğrenci Soyad";
-                    dataGridView1.Columns["student_phone"].HeaderText = "Telefen Numarası";
-                    dataGridView1.Columns["student_department"].HeaderText = "Bölüm";
-                    dataGridView1.Columns["student_email"].HeaderText = "Öğrenci E-Mail";
+                dataGridView1.DataSource = students;
+                //var students = db.students.ToList();
+                //dataGridView1.DataSource = students;
 
-                    dataGridView1.Columns["student_ıd"].Visible = false;
-                    dataGridView1.Columns["StudentEvents"].Visible = false;
+                dataGridView1.Columns["student_ıd"].HeaderText = "Öğrenci Id";
+                dataGridView1.Columns["student_name"].HeaderText = "Öğrenci Adı";
+                dataGridView1.Columns["student_surname"].HeaderText = "Öğrenci Soyad";
+                dataGridView1.Columns["student_phone"].HeaderText = "Telefen Numarası";
+                dataGridView1.Columns["student_department"].HeaderText = "Bölüm";
+                dataGridView1.Columns["student_email"].HeaderText = "Öğrenci E-Mail";
+
+                dataGridView1.Columns["student_ıd"].Visible = false;
+                //dataGridView1.Columns["StudentEvents"].Visible = false;
 
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata = {ex.Message}");
+                // MessageBox.Show($"Hata = {ex.Message}");
+                string inner = ex.InnerException?.Message ?? "İç hata yok";
+                MessageBox.Show($"Hata: {ex.Message}\n\nDetay: {inner}");
             }
         }
 
@@ -58,21 +73,27 @@ namespace Club_Otomasyon
                     student_department = cmb_bolum.Text,
                     student_email = txt_email.Text,
 
-                   
+
                 };
 
-                    db.students.Add(newstudent);
-                    db.SaveChanges();
+                db.students.Add(newstudent);
+                db.SaveChanges();
 
-                
-                    MessageBox.Show("Yeni Öğrenci Eklendi !");
-                    btn_listele.PerformClick();
+
+                MessageBox.Show("Yeni Öğrenci Eklendi !");
+                btn_listele.PerformClick();
 
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata = {ex.Message}");
+                //MessageBox.Show($"Hata = {ex.Message}");
+                //string inner = ex.InnerException?.Message ?? "İç hata yok";
+                //MessageBox.Show($"Hata: {ex.Message}\n\nDetay: {inner}");
+                {
+                    string hata = ex.ToString();
+                    MessageBox.Show(hata);
+                }
             }
         }
 
@@ -87,7 +108,7 @@ namespace Club_Otomasyon
         }
         private void LoadClubsToComboBox()
         {
-           
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -101,7 +122,7 @@ namespace Club_Otomasyon
                 txt_email.Text = dataGridView1.Rows[e.RowIndex].Cells["student_email"].Value.ToString();
 
                 var selectedStudent = dataGridView1.Rows[e.RowIndex].DataBoundItem as student;
-                
+
             }
         }
 
@@ -123,6 +144,14 @@ namespace Club_Otomasyon
                         student Student = db.students.Find(selectedId);
                         if (Student != null)
                         {
+                            // db.students.Remove(Student);
+                            // db.SaveChanges();
+                            var studentEvents = db.studentEvents
+                            .Where(se => se.student_ıd == selectedId)
+                            .ToList();
+
+                            db.studentEvents.RemoveRange(studentEvents);
+
                             db.students.Remove(Student);
                             db.SaveChanges();
 
@@ -136,7 +165,14 @@ namespace Club_Otomasyon
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata = {ex.Message}");
+                // MessageBox.Show($"Hata = {ex.Message}");
+                //string inner = ex.InnerException?.Message ?? "İç hata yok";
+                //MessageBox.Show($"Hata: {ex.Message}\n\nDetay: {inner}");
+
+                {
+                    string hata = ex.ToString();
+                    MessageBox.Show(hata);
+                }
             }
         }
 
@@ -155,7 +191,7 @@ namespace Club_Otomasyon
                         student.student_phone = txt_telefon.Text;
                         student.student_department = cmb_bolum.Text;
                         student.student_email = txt_email.Text;
-                       
+
 
                         db.SaveChanges();
                         MessageBox.Show("Öğrenci  güncellendi!");
@@ -165,8 +201,15 @@ namespace Club_Otomasyon
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Hata = {ex.Message}");
+                // MessageBox.Show($"Hata = {ex.Message}");
+                //string inner = ex.InnerException?.Message ?? "İç hata yok";
+                //MessageBox.Show($"Hata: {ex.Message}\n\nDetay: {inner}");
+                
+            {
+                string hata = ex.ToString();
+                MessageBox.Show(hata);
             }
+        }
 
         }
 
@@ -178,3 +221,4 @@ namespace Club_Otomasyon
         }
     }
 }
+
