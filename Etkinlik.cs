@@ -95,6 +95,7 @@ namespace Club_Otomasyon
                 dataGridView1.Columns["event_ıd"].Visible = false;
                 
 
+
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }

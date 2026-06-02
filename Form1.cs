@@ -35,8 +35,9 @@ namespace Club_Otomasyon
                     dataGridView1.Columns["student_email"].HeaderText = "Öğrenci E-Mail";
 
                     dataGridView1.Columns["student_ıd"].Visible = false;
+                    dataGridView1.Columns["StudentEvents"].Visible = false;
 
-                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 
             }
             catch (Exception ex)
