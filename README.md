@@ -121,7 +121,9 @@ Projede aşağıdaki tablolar kullanılmaktadır:
 
 ## UML Class Diagram
 
-![UML Diagram](Kulup_Diagram.Diagram.drawio.png)
+<p align="center">
+  <img src="Kulup_Diagram.png" width="900">
+</p>
 
 
 
